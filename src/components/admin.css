@@ -1,0 +1,11 @@
+import "/admin.css";
+import { useState } from "react"
+
+const Admin = () => {
+   const [coupon, setCoupon] = (e) =>
+         
+             );
+};
+
+
+export default Admin;

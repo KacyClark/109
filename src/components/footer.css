@@ -1,0 +1,11 @@
+.footer {
+    background-color: gray;
+    margin-top: 3rem;
+}
+.footer h5 {
+    color: black;
+}
+.footer h6 {
+    color: whitesmoke;
+}
+

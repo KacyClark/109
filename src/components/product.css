@@ -1,0 +1,21 @@
+.product {
+    border: 2px solid black;
+    display: inline-block;
+    border-radius: 1 rem;
+    padding: 10 px;
+    margin: 10px 5px 20px 5px;
+    box-shadow: 5px 5px 5px gray;
+    justify-content: space-between;
+}
+.product img {
+    width: 10rem;
+    height: 15rem;
+    margin: 10px;
+}
+.product label {
+    display: block;
+}
+#qp {
+    padding: 5px;
+    margin-bottom: 1rem;
+}
