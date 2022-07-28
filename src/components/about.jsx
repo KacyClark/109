@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import About from "./components/about";
+import "./about.css";
 
 const About = () => {
     const  [visible, setVisible] = useState(false);
 
     const changeVisibility = () => {
         setVisible(!visible);
-    };
     return (
         <div>
             <h1>About Me</h1>
@@ -15,6 +14,7 @@ const About = () => {
             
         </div>
     );
+};
 };
 
 export default About;

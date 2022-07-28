@@ -1,8 +1,22 @@
 import './navbar.css';
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import storeContext from "../context/storeContext";
 
 const Navbar = () => {
-    return (
+  const {cart, user}= useContext(storeContext);
+
+  const getCount = () => {
+    let count = 0;
+    for(let i=0; i<cart.length; i++) {
+      let prod = cart[i];    //count += cart[i].quantity
+    count += prod.quantity;
+    };
+    return count;
+  };
+   
+
+  return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
          <div className="container-fluid">
         <button className="navbar-toggler"
@@ -33,28 +47,14 @@ const Navbar = () => {
             <Link className="nav-link" to="/catalog">Catalog
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/nursery">Nursery
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/Puppyatrics">Puppyatrics
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="btn-btn--outline-light nav-link" to="/cart">View Cart
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/todo">To Do List
-            </Link>
-          </li>
+
         </ul>
         <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-        <button className="btn btn-outline-success" type="submit">Search
-        </button>
+          <Link className="btn btn-outline-light" to="/cart">
+        <span className="badge bg-secondary">View Cart {getCount()}</span>
+        </Link>
         </form>
+        
       </div>
     </div>
   </nav>
